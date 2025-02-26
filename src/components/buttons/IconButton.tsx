@@ -104,7 +104,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
               }
             )}
           >
-            <ImSpinner2 className='animate-spin' />
+            {React.createElement(ImSpinner2, { className: 'animate-spin' })}
           </div>
         )}
         {Icon && <Icon size='1em' className={cn(classNames?.icon)} />}
