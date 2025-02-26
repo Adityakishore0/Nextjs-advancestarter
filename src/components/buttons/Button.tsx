@@ -21,6 +21,9 @@ type ButtonProps = {
   };
 } & React.ComponentPropsWithRef<'button'>;
 
+// ✅ Fix: Ensure ImSpinner2 is recognized as an IconType
+const SpinnerIcon = ImSpinner2 as IconType;
+
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
@@ -99,6 +102,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         {...rest}
       >
+        {/* ✅ Fix: Ensure spinner icon is properly typed */}
         {isLoading && (
           <div
             className={cn(
@@ -110,9 +114,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               }
             )}
           >
-            <ImSpinner2 className='animate-spin' />
+            <SpinnerIcon className="animate-spin" />
           </div>
         )}
+
         {LeftIcon && (
           <div
             className={cn([

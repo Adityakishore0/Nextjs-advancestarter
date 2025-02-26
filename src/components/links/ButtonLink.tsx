@@ -15,14 +15,15 @@ const ButtonLinkVariant = [
   'light',
   'dark',
 ] as const;
+
 const ButtonLinkSize = ['sm', 'base'] as const;
 
 type ButtonLinkProps = {
   isDarkBg?: boolean;
   variant?: (typeof ButtonLinkVariant)[number];
   size?: (typeof ButtonLinkSize)[number];
-  leftIcon?: IconType | LucideIcon;
-  rightIcon?: IconType | LucideIcon;
+  leftIcon?: React.ComponentType<{ size?: string; className?: string }>;
+  rightIcon?: React.ComponentType<{ size?: string; className?: string }>;
   classNames?: {
     leftIcon?: string;
     rightIcon?: string;
@@ -99,7 +100,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           className
         )}
       >
-        {LeftIcon && (
+        {LeftIcon && typeof LeftIcon === 'function' && (
           <div
             className={cn([
               size === 'base' && 'mr-1',
@@ -107,7 +108,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             ])}
           >
             <LeftIcon
-              size='1em'
+              size="1em"
               className={cn(
                 [
                   size === 'base' && 'md:text-md text-md',
@@ -119,7 +120,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           </div>
         )}
         {children}
-        {RightIcon && (
+        {RightIcon && typeof RightIcon === 'function' && (
           <div
             className={cn([
               size === 'base' && 'ml-1',
@@ -127,7 +128,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             ])}
           >
             <RightIcon
-              size='1em'
+              size="1em"
               className={cn(
                 [
                   size === 'base' && 'text-md md:text-md',
