@@ -21,7 +21,7 @@ type ButtonProps = {
   };
 } & React.ComponentPropsWithRef<'button'>;
 
-// ✅ Fix: Ensure ImSpinner2 is recognized as an IconType
+
 const SpinnerIcon = ImSpinner2 as IconType;
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
