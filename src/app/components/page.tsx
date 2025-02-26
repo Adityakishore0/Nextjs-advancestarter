@@ -199,10 +199,7 @@ export default function ComponentPage() {
                 Button styled link with 3 variants.
               </p>
               <div className='flex flex-wrap gap-2'>
-                <ButtonLink
-                  variant='primary'
-                  href='https://aditya.is-cool.dev'
-                >
+                <ButtonLink variant='primary' href='https://aditya.is-cool.dev'>
                   Primary Variant
                 </ButtonLink>
                 <ButtonLink
@@ -222,10 +219,7 @@ export default function ComponentPage() {
                 <ButtonLink variant='dark' href='https://aditya.is-cool.dev'>
                   Dark Variant
                 </ButtonLink>
-                <ButtonLink
-                  variant='light'
-                  href='https://aditya.is-cool.dev'
-                >
+                <ButtonLink variant='light' href='https://aditya.is-cool.dev'>
                   Light Variant
                 </ButtonLink>
               </div>

@@ -8,6 +8,7 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/Adityakishore0/Nextjs-advancestarter)](https://github.com/Adityakishore0/Nextjs-advancestarter/stargazers)
 [![Depfu](https://badges.depfu.com/badges/fc6e730632ab9dacaf7df478a08684a7/overview.svg)](https://depfu.com/github/Adityakishore0/Nextjs-advancestarter?project_id=30160)
 [![Last Update](https://img.shields.io/badge/deps%20update-every%20sunday-blue.svg)](https://shields.io/)
+
 </div>
 
 ## Features
@@ -86,6 +87,3 @@ You can easily add expansions such as React Hook Form + Components, Storybook, a
 Check out the [expansion pack repository](https://github.com/Adityakishore0/expansion-pack) for more details.
 
 ---
-
-
-
